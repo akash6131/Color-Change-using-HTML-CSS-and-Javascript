@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color change</title>
+    <style>
+        #container{
+            background-color:burlywood;
+            width:300px;
+            margin:50px 350px;
+            padding:200px 200px;
+        }
+        .back{
+            background-color: rgba(234, 217, 217, 0.278);
+            width:280px;
+            padding:20px 20px;
+        } 
+        p{
+            padding:10px 50px;
+        }
+        button{
+            margin:0px 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="back">
+    <p id="para">Background Color</p>
+    </div>
+<button onclick="color()">Select color</button>
+    </div>
+    <script>
+        let arr=['red','blue','green','yellow','grey']
+        let ind=0;
+        function color(){
+            document.getElementById("container").style.backgroundColor=arr[ind]
+            document.getElementById('para').innerText='Background Color :'+arr[ind]
+            ind=(ind+1)%arr.length
+           
+        }
+    </script>
+</body>
+</html>
